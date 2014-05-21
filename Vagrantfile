@@ -7,6 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.require_version ">= 1.5.0"
 Vagrant.require_plugin 'vagrant-omnibus'
 Vagrant.require_plugin 'vagrant-vbguest'
+Vagrant.require_plugin 'vagrant-hostsupdater'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
@@ -16,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   config.vm.hostname = "started-jp-vagrant"
-
+  config.hostsupdater.remove_on_suspend = true
   # Set the version of chef to install using the vagrant-omnibus plugin
   config.omnibus.chef_version = "11.10.4"
 
@@ -80,6 +81,7 @@ chef.synced_folder_type="rsync"
     }
 
     chef.run_list = [
+      "recipe[webmin::default]"
     ]
   end
 end

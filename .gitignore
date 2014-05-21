@@ -9,7 +9,7 @@ pkg/
 
 # Berkshelf
 .vagrant
-/cookbooks
+cookbooks/*
 
 # Bundler
 bin/*
@@ -17,3 +17,8 @@ bin/*
 vendor/bundle
 .kitchen/
 .kitchen.local.yml
+
+
+#Keep Directory
+!.gitkeep
+!empty
