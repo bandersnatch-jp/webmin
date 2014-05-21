@@ -1,0 +1,19 @@
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+pkg/
+*.lock
+
+# Berkshelf
+.vagrant
+/cookbooks
+
+# Bundler
+bin/*
+.bundle/*
+vendor/bundle
+.kitchen/
+.kitchen.local.yml

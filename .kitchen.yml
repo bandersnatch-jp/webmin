@@ -1,0 +1,20 @@
+---
+driver:
+  name: vagrant
+driver_config:
+  require_chef_omnibus: "11.10.4"
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-12.04
+    driver:
+      box: bandersnatch/ubuntu-1204
+
+#  - name: centos-6.4
+
+suites:
+  - name: default
+    run_list:
+      - recipe["webmin"]
+    attributes:
