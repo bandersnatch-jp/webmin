@@ -2,4 +2,5 @@ site :opscode
 
 metadata
 
-cookbook 'webmin'
+cookbook 'apt'
+cookbook 'yum'
