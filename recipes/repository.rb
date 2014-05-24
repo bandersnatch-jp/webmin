@@ -18,6 +18,7 @@
 
 case node[:platform]
 when 'debian','ubuntu'
+  include_recipe "apt"
   apt_repository "webmin" do
     retries node['webmin']['package']['install']['retries']
     uri node['webmin']['apt']['baseurl']
@@ -31,6 +32,7 @@ when 'debian','ubuntu'
     key node['webmin']['apt']['gpgkey']
   end
 when 'centos','redhat','fedora','amazon'
+  include_recipe "yum"
   yum_repository 'webmin' do
     retries node['webmin']['package']['isntall']['retries']
     description node['webmin']['yum']['description']
