@@ -9,7 +9,7 @@ pkg/
 
 # Berkshelf
 .vagrant
-cookbooks/*
+/cookbooks
 
 # Bundler
 bin/*
