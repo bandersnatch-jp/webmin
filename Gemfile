@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'chef','~>11.10.0'
-gem 'knife-solo'
 gem 'berkshelf','~>2.0.0'
 gem 'foodcritic'
 gem 'rubocop'
@@ -21,7 +20,7 @@ gem 'rubocop'
 
 group :development do
   gem "vagrant",
-  git: "https://github.com/mitchellh/vagrant.git"
+  git: "https://github.com/mitchellh/vagrant.git", tag:"v1.5.4"
 end
 
 group :plugins do
