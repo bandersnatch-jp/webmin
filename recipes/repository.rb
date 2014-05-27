@@ -34,7 +34,7 @@ when 'debian','ubuntu'
 when 'centos','redhat','fedora','amazon'
   include_recipe "yum"
   yum_repository 'webmin' do
-    retries node['webmin']['package']['isntall']['retries']
+    retries node['webmin']['package']['install']['retries']
     description node['webmin']['yum']['description']
     baseurl node['webmin']['yum']['baseurl']
     mirrorlist node['webmin']['yum']['mirrorlist']
