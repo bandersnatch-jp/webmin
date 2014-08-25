@@ -16,6 +16,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+case node[:platform]
+when 'debian','ubuntu'
+  %w{
+    perl
+    libnet-ssleay-perl
+    openssl
+    libauthen-pam-perl
+    libpam-runtime
+    libio-pty-perl
+    apt-show-versions
+    python
+  }.each do |pkgname|
+    package "#{pkgname}" do
+      action :install
+    end
+end
+
+
 package "webmin" do
   action [:install]
 case node[:platform]
