@@ -42,5 +42,3 @@ when 'debian','ubuntu'
 when 'centos','redhat','fedora','amazon'
 #  options("-y")
 end
-
-end
