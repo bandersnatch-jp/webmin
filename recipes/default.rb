@@ -16,14 +16,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe "webmin::repository"
-include_recipe "webmin::install"
+#include_recipe "webmin::repository"
+#include_recipe "webmin::install"
 
-execute "init password of webmin root as #{node[:webmin][:root_password]}" do
-  case node[:platform]
-  when 'debian','ubuntu'
-    command "/usr/share/webmin/changepass.pl /etc/webmin root #{node[:webmin][:root_password]}"
-  when 'centos','redhat','fedora','amazon'
-    command "/usr/libexec/webmin/changepass.pl /etc/webmin root #{node[:webmin][:root_password]}"
-  end
-end
+#execute "init password of webmin root as #{node[:webmin][:root_password]}" do
+#  case node[:platform]
+#  when 'debian','ubuntu'
+#    command "/usr/share/webmin/changepass.pl /etc/webmin root #{node[:webmin][:root_password]}"
+#  when 'centos','redhat','fedora','amazon'
+#    command "/usr/libexec/webmin/changepass.pl /etc/webmin root #{node[:webmin][:root_password]}"
+#  end
+e#nd
