@@ -36,6 +36,7 @@ end
 
 package "webmin" do
   action [:install]
+end
 case node[:platform]
 when 'debian','ubuntu'
   options("--force-yes")
