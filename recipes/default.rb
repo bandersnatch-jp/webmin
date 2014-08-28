@@ -26,4 +26,4 @@
 #  when 'centos','redhat','fedora','amazon'
 #    command "/usr/libexec/webmin/changepass.pl /etc/webmin root #{node[:webmin][:root_password]}"
 #  end
-e#nd
+#end
