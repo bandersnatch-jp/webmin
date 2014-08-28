@@ -31,6 +31,7 @@ when 'debian','ubuntu'
     package "#{pkgname}" do
       action :install
     end
+  end
 end
 
 
