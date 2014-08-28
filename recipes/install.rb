@@ -36,10 +36,10 @@ end
 
 package "webmin" do
   action [:install]
-end
-case node[:platform]
-when 'debian','ubuntu'
-  options("--force-yes")
-when 'centos','redhat','fedora','amazon'
-#  options("-y")
+  case node[:platform]
+  when 'debian','ubuntu'
+    options("--force-yes")
+  when 'centos','redhat','fedora','amazon'
+  #  options("-y")
+  end
 end
